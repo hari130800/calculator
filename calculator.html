@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <p id="text">0</p>
+        <div class="buttons">
+            <button onclick="cleardisplay()"class="symbol">AC</button>
+            <button onclick="modulus()"class="symbol">%</button>
+            <button onclick="plusorminus()"class="symbol">+\-</button>
+            <button onclick="div()" class="symbol">/</button>
+            <button onclick="seven()">7</button>
+            <button onclick="eight()">8</button>
+            <button onclick="nine()">9</button>
+            <button onclick="mul()"class="symbol">*</button>
+            <button onclick="four()">4</button>
+            <button onclick="five()">5</button>
+            <button onclick="six()">6</button>
+            <button onclick="sub()"class="symbol">-</button>
+            <button onclick="three()">3</button>
+            <button onclick="two()">2</button>
+            <button onclick="one()">1</button>
+            <button onclick="add()"class="symbol">+</button>
+            <button onclick="zero()"class="hello">0</button>
+            <button onclick="decimal()"class="symbol">.</button>
+        <button onclick="result()"class="symbol">=</button>
+        </div>
+    </div>
+    <script>
+        function two() {
+            document.getElementById("text").innerText += 2
+        }
+        function one() {
+            document.getElementById("text").innerText += 1
+        }
+        function zero() {
+            document.getElementById("text").innerText += 0
+        }
+        function three() {
+            document.getElementById("text").innerText += 3
+        }
+        function six() {
+            document.getElementById("text").innerText += 6
+        }
+        function four() {
+            document.getElementById("text").innerText += 4
+        }
+        function five() {
+            document.getElementById("text").innerText += 5
+        }
+        function nine() {
+            document.getElementById("text").innerText += 9
+        }
+        function eight() {
+            document.getElementById("text").innerText += 8
+        }
+        function seven() {
+            document.getElementById("text").innerText += 7
+        }
+
+        function add() {
+            document.getElementById("text").innerText += "+"
+        }
+        function sub() {
+            document.getElementById("text").innerText += "-"
+        }
+        function mul() {
+            document.getElementById("text").innerText += "*"
+        }
+        function div() {
+            document.getElementById("text").innerText += "/"
+        }
+        function plusorminus(){
+            document.getElementById("text").innerText +="+\-"
+        }
+        function modulus(){
+            document.getElementById("text").innerText +="%"
+        }
+        function decimal(){
+            document.getElementById("text").innerText +="."
+        }
+        function cleardisplay(){
+            document.getElementById("text").innerText ="0"
+        }
+        function result() {
+            let eqn = document.getElementById("text").innerText;
+            console.log(eval(eqn));
+        }
+    </script>
+</body>
+
+</html>
